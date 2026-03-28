@@ -9,9 +9,9 @@
         (function() {
             var lang = localStorage.getItem('site-lang');
             if (!lang) {
-                lang = (navigator.language || navigator.userLanguage || 'zh').startsWith('zh') ? 'zh-Hans' : 'en';
+                lang = (navigator.language || navigator.userLanguage || 'zh').startsWith('zh') ? 'zh' : 'en';
             }
-            document.documentElement.lang = lang;
+            if (lang === 'en') document.documentElement.classList.add('show-en');
         })();
     </script>
 </head>
@@ -277,10 +277,14 @@
     <script>
         function toggleLang() {
             var html = document.documentElement;
-            var current = html.lang;
-            var next = current.startsWith('zh') ? 'en' : 'zh-Hans';
-            html.lang = next;
-            localStorage.setItem('site-lang', next);
+            var isEn = html.classList.contains('show-en');
+            if (isEn) {
+                html.classList.remove('show-en');
+                localStorage.setItem('site-lang', 'zh');
+            } else {
+                html.classList.add('show-en');
+                localStorage.setItem('site-lang', 'en');
+            }
         }
     </script>
 </body>
