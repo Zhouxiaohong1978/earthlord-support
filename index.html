@@ -3,88 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>末日之主 - 首页</title>
+    <title>末日之主 - Doomsday Lord</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            var lang = localStorage.getItem('site-lang');
+            if (!lang) {
+                lang = (navigator.language || navigator.userLanguage || 'zh').startsWith('zh') ? 'zh-Hans' : 'en';
+            }
+            document.documentElement.lang = lang;
+        })();
+    </script>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>☢️ 末日之主</h1>
-            <p class="subtitle">用脚步丈量你的末日王国</p>
+            <p class="subtitle lang-zh">用脚步丈量你的末日王国</p>
+            <p class="subtitle lang-en">Walk to Claim Your Doomsday Kingdom</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="support.html">技术支持</a></li>
-                <li><a href="privacy.html">隐私政策</a></li>
-                <li><a href="terms.html">用户协议</a></li>
+                <li><a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a></li>
+                <li><a href="support.html"><span class="lang-zh">技术支持</span><span class="lang-en">Support</span></a></li>
+                <li><a href="privacy.html"><span class="lang-zh">隐私政策</span><span class="lang-en">Privacy</span></a></li>
+                <li><a href="terms.html"><span class="lang-zh">用户协议</span><span class="lang-en">Terms</span></a></li>
+                <li class="lang-switch">
+                    <button class="lang-toggle" onclick="toggleLang()">
+                        <span class="lang-zh">English</span>
+                        <span class="lang-en">中文</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
 
     <main>
         <div class="container">
-            <section class="hero">
-                <h2>欢迎使用末日之主</h2>
-                <p>末日之主是一款沉浸式末日主题 iOS 游戏。真实走路即可探索废土、圈地建造、与玩家交易通讯，在荒芜的末日世界中建立属于你的王国。</p>
-            </section>
 
-            <section class="features">
-                <h2>核心玩法</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>🗺️ 步行探索</h3>
-                        <p>真实步行解锁探索进度，在废墟中搜刮水源、食物、建造材料</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🏰 圈地建造</h3>
-                        <p>用GPS路径圈定你的领地，建造哨塔、仓库、通讯设备，经营末日王国</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📡 通讯系统</h3>
-                        <p>通过对讲机、营地广播、卫星频道与玩家联络，位置信息实时共享</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>💹 资源交易</h3>
-                        <p>在交易中心挂单出售或购买物资，构建末日经济生态</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>💧 生存体征</h3>
-                        <p>维持饱食度与水分，及时补给以保持战斗力。濒死状态将限制部分行动</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🏴 领地税收</h3>
-                        <p>其他玩家进入你的领地搜刮时自动扣税，被动积累资源</p>
-                    </div>
-                </div>
-            </section>
+            <!-- Chinese -->
+            <div class="lang-zh">
+                <section class="hero">
+                    <h2>欢迎使用末日之主</h2>
+                    <p>末日之主是一款沉浸式末日主题 iOS 游戏。真实走路即可探索废土、圈地建造、与玩家交易通讯，在荒芜的末日世界中建立属于你的王国。</p>
+                </section>
 
-            <section class="info">
-                <h2>应用信息</h2>
-                <ul>
-                    <li><strong>应用名称：</strong> 末日之主</li>
-                    <li><strong>开发者：</strong> ZhouXiaoHong</li>
-                    <li><strong>最低 iOS 版本：</strong> 16.6</li>
-                    <li><strong>Bundle ID：</strong> com.zhouxiaohong.EarthLord</li>
-                    <li><strong>当前版本：</strong> 1.1</li>
-                </ul>
-            </section>
+                <section class="features">
+                    <h2>核心玩法</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h3>🗺️ 步行探索</h3>
+                            <p>真实步行解锁探索进度，在废墟中搜刮水源、食物、建造材料</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🏰 圈地建造</h3>
+                            <p>用GPS路径圈定你的领地，建造哨塔、仓库、通讯设备，经营末日王国</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>📡 通讯系统</h3>
+                            <p>通过对讲机、营地广播、卫星频道与玩家联络，位置信息实时共享</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>💹 资源交易</h3>
+                            <p>在交易中心挂单出售或购买物资，构建末日经济生态</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>💧 生存体征</h3>
+                            <p>维持饱食度与水分，及时补给以保持战斗力。濒死状态将限制部分行动</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🏴 领地税收</h3>
+                            <p>其他玩家进入你的领地搜刮时自动扣税，被动积累资源</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <h2>应用信息</h2>
+                    <ul>
+                        <li><strong>应用名称：</strong>末日之主</li>
+                        <li><strong>开发者：</strong>ZhouXiaoHong</li>
+                        <li><strong>最低 iOS 版本：</strong>16.6</li>
+                        <li><strong>Bundle ID：</strong>com.zhouxiaohong.EarthLord</li>
+                        <li><strong>当前版本：</strong>1.1</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- English -->
+            <div class="lang-en">
+                <section class="hero">
+                    <h2>Welcome to 末日之主</h2>
+                    <p>末日之主 is an immersive apocalypse-themed iOS game. Walk in the real world to explore wastelands, claim territory, build your base, trade with players, and establish your kingdom in a post-apocalyptic world.</p>
+                </section>
+
+                <section class="features">
+                    <h2>Core Features</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h3>🗺️ Walking Exploration</h3>
+                            <p>Walk in real life to unlock exploration progress — scavenge water, food, and building materials from ruins</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🏰 Territory &amp; Building</h3>
+                            <p>Trace a GPS path to claim your territory, then build watchtowers, warehouses, and communication devices</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>📡 Communication</h3>
+                            <p>Contact players via walkie-talkie, camp radio, and satellite channels with real-time location sharing</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>💹 Resource Trading</h3>
+                            <p>Post sell orders or buy supplies at the Trading Post to build a post-apocalyptic economy</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>💧 Survival Vitals</h3>
+                            <p>Maintain your satiety and hydration — resupply in time to stay effective. Dying state restricts key actions</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🏴 Territory Tax</h3>
+                            <p>Passively earn resources when other players scavenge inside your territory — your land works for you</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <h2>App Info</h2>
+                    <ul>
+                        <li><strong>App Name:</strong> 末日之主 (Doomsday Lord)</li>
+                        <li><strong>Developer:</strong> ZhouXiaoHong</li>
+                        <li><strong>Minimum iOS:</strong> 16.6</li>
+                        <li><strong>Bundle ID:</strong> com.zhouxiaohong.EarthLord</li>
+                        <li><strong>Version:</strong> 1.1</li>
+                    </ul>
+                </section>
+            </div>
+
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 末日之主. 版权所有。</p>
+            <p class="lang-zh">&copy; 2026 末日之主. 版权所有。</p>
+            <p class="lang-en">&copy; 2026 末日之主. All rights reserved.</p>
             <p>
-                <a href="index.html">首页</a> |
-                <a href="support.html">技术支持</a> |
-                <a href="privacy.html">隐私政策</a> |
-                <a href="terms.html">用户协议</a>
+                <a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a> |
+                <a href="support.html"><span class="lang-zh">技术支持</span><span class="lang-en">Support</span></a> |
+                <a href="privacy.html"><span class="lang-zh">隐私政策</span><span class="lang-en">Privacy</span></a> |
+                <a href="terms.html"><span class="lang-zh">用户协议</span><span class="lang-en">Terms</span></a>
             </p>
         </div>
     </footer>
+
+    <script>
+        function toggleLang() {
+            var html = document.documentElement;
+            var current = html.lang;
+            var next = current.startsWith('zh') ? 'en' : 'zh-Hans';
+            html.lang = next;
+            localStorage.setItem('site-lang', next);
+        }
+    </script>
 </body>
 </html>
