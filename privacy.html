@@ -3,196 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 末日之主</title>
+    <title>隐私政策 / Privacy Policy - 末日之主</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            var lang = localStorage.getItem('site-lang');
+            if (!lang) {
+                lang = (navigator.language || navigator.userLanguage || 'zh').startsWith('zh') ? 'zh-Hans' : 'en';
+            }
+            document.documentElement.lang = lang;
+        })();
+    </script>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>☢️ 末日之主</h1>
-            <p class="subtitle">隐私政策</p>
+            <p class="subtitle lang-zh">隐私政策</p>
+            <p class="subtitle lang-en">Privacy Policy</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="support.html">技术支持</a></li>
-                <li><a href="privacy.html">隐私政策</a></li>
-                <li><a href="terms.html">用户协议</a></li>
+                <li><a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a></li>
+                <li><a href="support.html"><span class="lang-zh">技术支持</span><span class="lang-en">Support</span></a></li>
+                <li><a href="privacy.html"><span class="lang-zh">隐私政策</span><span class="lang-en">Privacy</span></a></li>
+                <li><a href="terms.html"><span class="lang-zh">用户协议</span><span class="lang-en">Terms</span></a></li>
+                <li class="lang-switch">
+                    <button class="lang-toggle" onclick="toggleLang()">
+                        <span class="lang-zh">English</span>
+                        <span class="lang-en">中文</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
 
     <main>
         <div class="container">
-            <h2>隐私政策</h2>
 
-            <p><strong>最后更新日期：2026年3月28日</strong></p>
+            <!-- Chinese -->
+            <div class="lang-zh">
+                <h2>隐私政策</h2>
+                <p><strong>最后更新日期：2026年3月28日</strong></p>
 
-            <section class="privacy-section">
-                <h3>1. 政策概述</h3>
-                <p>末日之主（以下简称"应用"）尊重您的隐私。本隐私政策解释我们如何收集、使用、披露和保护您在使用本应用时的信息。</p>
-                <p>请仔细阅读本隐私政策。通过使用末日之主，您同意我们按照本政策收集和使用您的信息。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>1. 政策概述</h3>
+                    <p>末日之主（以下简称"应用"）尊重您的隐私。本隐私政策解释我们如何收集、使用、披露和保护您在使用本应用时的信息。</p>
+                    <p>请仔细阅读本隐私政策。通过使用末日之主，您同意我们按照本政策收集和使用您的信息。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>2. 我们收集的信息</h3>
+                <section class="privacy-section">
+                    <h3>2. 我们收集的信息</h3>
 
-                <h4>2.1 自动收集的信息</h4>
-                <ul>
-                    <li><strong>设备信息：</strong>设备型号、操作系统版本、设备标识符</li>
-                    <li><strong>应用使用数据：</strong>您使用应用的频率、使用时长、访问的功能</li>
-                    <li><strong>性能数据：</strong>应用崩溃报告、错误日志</li>
-                </ul>
+                    <h4>2.1 自动收集的信息</h4>
+                    <ul>
+                        <li><strong>设备信息：</strong>设备型号、操作系统版本、设备标识符</li>
+                        <li><strong>应用使用数据：</strong>您使用应用的频率、使用时长、访问的功能</li>
+                        <li><strong>性能数据：</strong>应用崩溃报告、错误日志</li>
+                    </ul>
 
-                <h4>2.2 您主动提供的信息</h4>
-                <ul>
-                    <li><strong>账号信息：</strong>邮箱地址、用户名、游戏内呼号（Callsign）</li>
-                    <li><strong>位置信息：</strong>仅当您明确授权时收集精确位置，用于探索、圈地、POI 搜索及通讯消息定位功能</li>
-                    <li><strong>用户生成内容：</strong>您设置的领地广播消息，该内容会存储于服务器并对进入您领地的其他玩家可见</li>
-                    <li><strong>反馈信息：</strong>您提供的错误报告、功能建议、用户反馈</li>
-                </ul>
+                    <h4>2.2 您主动提供的信息</h4>
+                    <ul>
+                        <li><strong>账号信息：</strong>邮箱地址、用户名、游戏内呼号（Callsign）</li>
+                        <li><strong>位置信息：</strong>仅当您明确授权时收集精确位置，用于探索、圈地、POI 搜索及通讯消息定位功能</li>
+                        <li><strong>用户生成内容：</strong>您设置的领地广播消息，该内容会存储于服务器并对进入您领地的其他玩家可见</li>
+                        <li><strong>反馈信息：</strong>您提供的错误报告、功能建议、用户反馈</li>
+                    </ul>
 
-                <h4>2.3 游戏数据</h4>
-                <ul>
-                    <li><strong>领地数据：</strong>领地坐标、面积、建筑信息</li>
-                    <li><strong>背包与资源：</strong>游戏内物品、资源数量</li>
-                    <li><strong>探索记录：</strong>探索距离、次数、获得奖励</li>
-                    <li><strong>体征数据：</strong>游戏内饱食度与水分数值（仅为游戏功能数据，非真实健康医疗数据）</li>
-                    <li><strong>领地访问记录：</strong>当玩家进入他人领地时，系统记录访问行为用于游戏内税收结算，领地主可查看相关记录</li>
-                    <li><strong>通讯数据：</strong>频道消息内容（含发送时位置信息，频道成员可见）、订阅频道列表、通讯设备解锁状态</li>
-                    <li><strong>交易数据：</strong>挂单记录、交易历史</li>
-                </ul>
+                    <h4>2.3 游戏数据</h4>
+                    <ul>
+                        <li><strong>领地数据：</strong>领地坐标、面积、建筑信息</li>
+                        <li><strong>背包与资源：</strong>游戏内物品、资源数量</li>
+                        <li><strong>探索记录：</strong>探索距离、次数、获得奖励</li>
+                        <li><strong>体征数据：</strong>游戏内饱食度与水分数值（仅为游戏功能数据，非真实健康医疗数据）</li>
+                        <li><strong>领地访问记录：</strong>当玩家进入他人领地时，系统记录访问行为用于游戏内税收结算，领地主可查看相关记录</li>
+                        <li><strong>通讯数据：</strong>频道消息内容（含发送时位置信息，频道成员可见）、订阅频道列表、通讯设备解锁状态</li>
+                        <li><strong>交易数据：</strong>挂单记录、交易历史</li>
+                    </ul>
 
-                <h4>2.4 购买数据</h4>
-                <ul>
-                    <li><strong>内购记录：</strong>通过 Apple App Store 完成的内购及订阅记录</li>
-                    <li>我们不收集您的支付卡或财务信息，所有支付均通过 Apple 处理</li>
-                </ul>
+                    <h4>2.4 购买数据</h4>
+                    <ul>
+                        <li><strong>内购记录：</strong>通过 Apple App Store 完成的内购及订阅记录</li>
+                        <li>我们不收集您的支付卡或财务信息，所有支付均通过 Apple 处理</li>
+                    </ul>
 
-                <h4>2.5 我们不收集的信息</h4>
-                <ul>
-                    <li>真实健康或医疗数据</li>
-                    <li>财务或支付卡信息</li>
-                    <li>敏感个人身份信息（如身份证号、护照号等）</li>
-                    <li>生物识别数据</li>
-                </ul>
-            </section>
+                    <h4>2.5 我们不收集的信息</h4>
+                    <ul>
+                        <li>真实健康或医疗数据</li>
+                        <li>财务或支付卡信息</li>
+                        <li>敏感个人身份信息（如身份证号、护照号等）</li>
+                        <li>生物识别数据</li>
+                    </ul>
+                </section>
 
-            <section class="privacy-section">
-                <h3>3. 信息使用目的</h3>
-                <ul>
-                    <li>提供、维护和改进应用功能和性能</li>
-                    <li>实现游戏核心玩法（探索、圈地、领地管理、通讯、交易）</li>
-                    <li>计算游戏内领地税收结算</li>
-                    <li>诊断应用问题并修复错误</li>
-                    <li>了解用户行为以优化用户体验</li>
-                    <li>发送应用更新和安全通知</li>
-                    <li>遵守法律和法规要求</li>
-                    <li>防止欺诈和保护应用安全</li>
-                </ul>
-            </section>
+                <section class="privacy-section">
+                    <h3>3. 信息使用目的</h3>
+                    <ul>
+                        <li>提供、维护和改进应用功能和性能</li>
+                        <li>实现游戏核心玩法（探索、圈地、领地管理、通讯、交易）</li>
+                        <li>计算游戏内领地税收结算</li>
+                        <li>诊断应用问题并修复错误</li>
+                        <li>了解用户行为以优化用户体验</li>
+                        <li>发送应用更新和安全通知</li>
+                        <li>遵守法律和法规要求</li>
+                        <li>防止欺诈和保护应用安全</li>
+                    </ul>
+                </section>
 
-            <section class="privacy-section">
-                <h3>4. 信息共享</h3>
-                <p>我们不会将您的个人信息出售给第三方。我们仅在以下情况下共享信息：</p>
-                <ul>
-                    <li><strong>游戏内玩家间共享：</strong>您的呼号、领地位置、广播消息、通讯频道内容等会对其他游戏玩家可见，这是游戏核心功能的必要组成</li>
-                    <li><strong>服务提供商：</strong>与帮助我们运营应用的第三方服务提供商共享（如 Supabase 云数据库、Apple 相关服务）</li>
-                    <li><strong>法律要求：</strong>当法律、法规或政府部门要求时</li>
-                    <li><strong>安全保护：</strong>为保护应用和用户安全而必要的情况</li>
-                    <li><strong>应用转让：</strong>在应用被收购或合并的情况下</li>
-                </ul>
-            </section>
+                <section class="privacy-section">
+                    <h3>4. 信息共享</h3>
+                    <p>我们不会将您的个人信息出售给第三方。我们仅在以下情况下共享信息：</p>
+                    <ul>
+                        <li><strong>游戏内玩家间共享：</strong>您的呼号、领地位置、广播消息、通讯频道内容等会对其他游戏玩家可见，这是游戏核心功能的必要组成</li>
+                        <li><strong>服务提供商：</strong>与帮助我们运营应用的第三方服务提供商共享（如 Supabase 云数据库、Apple 相关服务）</li>
+                        <li><strong>法律要求：</strong>当法律、法规或政府部门要求时</li>
+                        <li><strong>安全保护：</strong>为保护应用和用户安全而必要的情况</li>
+                        <li><strong>应用转让：</strong>在应用被收购或合并的情况下</li>
+                    </ul>
+                </section>
 
-            <section class="privacy-section">
-                <h3>5. 位置信息</h3>
-                <p>应用需要访问您的精确位置以实现以下核心功能：</p>
-                <ul>
-                    <li>步行探索与距离计算</li>
-                    <li>圈地（实时路径追踪）</li>
-                    <li>附近 POI（废墟）搜索与搜刮</li>
-                    <li>通讯消息附带位置信息（对频道成员可见）</li>
-                    <li>领地碰撞检测与边界警告</li>
-                </ul>
-                <p>您可以在设备设置中随时允许或禁用位置权限，禁用后上述功能将无法正常使用。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>5. 位置信息</h3>
+                    <p>应用需要访问您的精确位置以实现以下核心功能：</p>
+                    <ul>
+                        <li>步行探索与距离计算</li>
+                        <li>圈地（实时路径追踪）</li>
+                        <li>附近 POI（废墟）搜索与搜刮</li>
+                        <li>通讯消息附带位置信息（对频道成员可见）</li>
+                        <li>领地碰撞检测与边界警告</li>
+                    </ul>
+                    <p>您可以在设备设置中随时允许或禁用位置权限，禁用后上述功能将无法正常使用。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>6. 数据安全</h3>
-                <p>我们采取合理的技术和组织措施保护您的信息，包括：</p>
-                <ul>
-                    <li>使用加密技术保护传输中的数据</li>
-                    <li>通过 Supabase 行级安全策略（RLS）限制数据访问权限</li>
-                    <li>定期安全审计和更新</li>
-                </ul>
-                <p><strong>注意：</strong>互联网传输中不存在完全的安全保证。我们努力保护您的信息，但无法完全保证其安全性。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>6. 数据安全</h3>
+                    <p>我们采取合理的技术和组织措施保护您的信息，包括：</p>
+                    <ul>
+                        <li>使用加密技术保护传输中的数据</li>
+                        <li>通过 Supabase 行级安全策略（RLS）限制数据访问权限</li>
+                        <li>定期安全审计和更新</li>
+                    </ul>
+                    <p><strong>注意：</strong>互联网传输中不存在完全的安全保证。我们努力保护您的信息，但无法完全保证其安全性。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>7. 数据保留</h3>
-                <p>我们仅在必要的时间内保留您的个人信息。当您删除账号时，我们将删除与您账号关联的个人数据（游戏数据、位置记录、通讯消息等）。部分数据可能因法律要求保留一定期限。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>7. 数据保留</h3>
+                    <p>我们仅在必要的时间内保留您的个人信息。当您删除账号时，我们将删除与您账号关联的个人数据（游戏数据、位置记录、通讯消息等）。部分数据可能因法律要求保留一定期限。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>8. 您的权利</h3>
-                <p>根据适用的隐私法律，您可能有权：</p>
-                <ul>
-                    <li>访问我们持有的关于您的个人信息</li>
-                    <li>要求更正不准确的信息</li>
-                    <li>要求删除您的个人信息（可在应用内设置页直接操作）</li>
-                    <li>反对我们处理您的信息</li>
-                    <li>请求获得您的数据副本（可携带格式）</li>
-                </ul>
-                <p>如需行使这些权利，请通过本政策底部的联系方式与我们联系。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>8. 您的权利</h3>
+                    <p>根据适用的隐私法律，您可能有权：</p>
+                    <ul>
+                        <li>访问我们持有的关于您的个人信息</li>
+                        <li>要求更正不准确的信息</li>
+                        <li>要求删除您的个人信息（可在应用内设置页直接操作）</li>
+                        <li>反对我们处理您的信息</li>
+                        <li>请求获得您的数据副本（可携带格式）</li>
+                    </ul>
+                    <p>如需行使这些权利，请通过本政策底部的联系方式与我们联系。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>9. 儿童隐私</h3>
-                <p>末日之主不针对 13 岁以下的儿童。我们不会有意收集 13 岁以下儿童的个人信息。如果我们发现收集了儿童的信息，我们将立即删除。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>9. 儿童隐私</h3>
+                    <p>末日之主不针对 13 岁以下的儿童。我们不会有意收集 13 岁以下儿童的个人信息。如果我们发现收集了儿童的信息，我们将立即删除。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>10. 政策更新</h3>
-                <p>我们可能不时更新本隐私政策。重大变更时，我们将通过应用通知您。您继续使用应用即表示您接受更新的隐私政策。</p>
-            </section>
+                <section class="privacy-section">
+                    <h3>10. 政策更新</h3>
+                    <p>我们可能不时更新本隐私政策。重大变更时，我们将通过应用通知您。您继续使用应用即表示您接受更新的隐私政策。</p>
+                </section>
 
-            <section class="privacy-section">
-                <h3>11. 联系我们</h3>
-                <ul>
-                    <li><strong>邮箱：</strong>1614103587@qq.com</li>
-                    <li><strong>回复时间：</strong>通常在 7 个工作日内回复</li>
-                    <li><strong>请求内容：</strong>请在邮件中清楚说明您的请求或疑虑</li>
-                </ul>
-            </section>
+                <section class="privacy-section">
+                    <h3>11. 联系我们</h3>
+                    <ul>
+                        <li><strong>邮箱：</strong>1614103587@qq.com</li>
+                        <li><strong>回复时间：</strong>通常在 7 个工作日内回复</li>
+                        <li><strong>请求内容：</strong>请在邮件中清楚说明您的请求或疑虑</li>
+                    </ul>
+                </section>
 
-            <section class="privacy-section">
-                <h3>12. 合规性</h3>
-                <ul>
-                    <li>GDPR（欧洲通用数据保护条例）</li>
-                    <li>Apple App Store 隐私政策要求</li>
-                    <li>中华人民共和国个人信息保护法</li>
-                </ul>
-            </section>
+                <section class="privacy-section">
+                    <h3>12. 合规性</h3>
+                    <ul>
+                        <li>GDPR（欧洲通用数据保护条例）</li>
+                        <li>Apple App Store 隐私政策要求</li>
+                        <li>中华人民共和国个人信息保护法</li>
+                    </ul>
+                </section>
 
-            <p style="margin-top: 40px; font-size: 0.9em; color: #666;">
-                <strong>免责声明：</strong>本隐私政策仅供参考，不构成法律建议。如需法律咨询，请咨询您的法律顾问。
-            </p>
+                <p style="margin-top: 40px; font-size: 0.9em; color: #666;">
+                    <strong>免责声明：</strong>本隐私政策仅供参考，不构成法律建议。如需法律咨询，请咨询您的法律顾问。
+                </p>
+            </div>
+
+            <!-- English -->
+            <div class="lang-en">
+                <h2>Privacy Policy</h2>
+                <p><strong>Last Updated: March 28, 2026</strong></p>
+
+                <section class="privacy-section">
+                    <h3>1. Overview</h3>
+                    <p>末日之主 (hereinafter "the App") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect information about you when you use the App.</p>
+                    <p>Please read this policy carefully. By using 末日之主, you agree to the collection and use of information in accordance with this policy.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>2. Information We Collect</h3>
+
+                    <h4>2.1 Automatically Collected</h4>
+                    <ul>
+                        <li><strong>Device Info:</strong> Device model, OS version, device identifiers</li>
+                        <li><strong>Usage Data:</strong> Feature access frequency, session duration, features used</li>
+                        <li><strong>Performance Data:</strong> Crash reports, error logs</li>
+                    </ul>
+
+                    <h4>2.2 Information You Provide</h4>
+                    <ul>
+                        <li><strong>Account Info:</strong> Email address, username, in-game Callsign</li>
+                        <li><strong>Location:</strong> Precise location collected only with your explicit permission, used for exploration, territory claiming, POI search, and communication message location tagging</li>
+                        <li><strong>User-Generated Content:</strong> Territory broadcast messages you set — stored on our servers and visible to other players who enter your territory</li>
+                        <li><strong>Feedback:</strong> Bug reports, feature suggestions, and user feedback you submit</li>
+                    </ul>
+
+                    <h4>2.3 Game Data</h4>
+                    <ul>
+                        <li><strong>Territory Data:</strong> Territory coordinates, area, building information</li>
+                        <li><strong>Inventory &amp; Resources:</strong> In-game items and resource counts</li>
+                        <li><strong>Exploration Records:</strong> Exploration distances, counts, rewards received</li>
+                        <li><strong>Vitals Data:</strong> In-game satiety and hydration values (game-only data, not real health or medical data)</li>
+                        <li><strong>Territory Visit Records:</strong> When a player enters another player's territory, the visit is recorded for in-game tax settlement; territory owners can view these records</li>
+                        <li><strong>Communication Data:</strong> Channel message content (including location at time of send, visible to channel members), subscribed channel list, communication device unlock status</li>
+                        <li><strong>Trade Data:</strong> Listing records, trade history</li>
+                    </ul>
+
+                    <h4>2.4 Purchase Data</h4>
+                    <ul>
+                        <li><strong>In-App Purchases:</strong> Purchase and subscription records completed via Apple App Store</li>
+                        <li>We do not collect payment card or financial information — all payments are processed by Apple</li>
+                    </ul>
+
+                    <h4>2.5 What We Do Not Collect</h4>
+                    <ul>
+                        <li>Real health or medical data</li>
+                        <li>Financial or payment card information</li>
+                        <li>Sensitive personal identifiers (e.g. ID card numbers, passport numbers)</li>
+                        <li>Biometric data</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>3. How We Use Your Information</h3>
+                    <ul>
+                        <li>Provide, maintain, and improve App features and performance</li>
+                        <li>Enable core gameplay (exploration, territory claiming, management, communication, trading)</li>
+                        <li>Calculate in-game territory tax settlements</li>
+                        <li>Diagnose issues and fix bugs</li>
+                        <li>Understand user behavior to improve the experience</li>
+                        <li>Send App updates and security notifications</li>
+                        <li>Comply with legal and regulatory requirements</li>
+                        <li>Prevent fraud and protect App security</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>4. Information Sharing</h3>
+                    <p>We do not sell your personal information to third parties. We only share information in the following cases:</p>
+                    <ul>
+                        <li><strong>In-Game Player Sharing:</strong> Your Callsign, territory location, broadcast messages, and communication channel content are visible to other players as a necessary part of core gameplay</li>
+                        <li><strong>Service Providers:</strong> Shared with third-party providers that help us operate the App (e.g. Supabase cloud database, Apple services)</li>
+                        <li><strong>Legal Requirements:</strong> When required by law, regulation, or government authority</li>
+                        <li><strong>Security:</strong> When necessary to protect the App and its users</li>
+                        <li><strong>Business Transfer:</strong> In the event the App is acquired or merged</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>5. Location Data</h3>
+                    <p>The App requires access to your precise location to power these core features:</p>
+                    <ul>
+                        <li>Walking exploration and distance calculation</li>
+                        <li>Territory claiming (real-time path tracking)</li>
+                        <li>Nearby POI (ruins) search and scavenging</li>
+                        <li>Location tagging in communication messages (visible to channel members)</li>
+                        <li>Territory collision detection and boundary warnings</li>
+                    </ul>
+                    <p>You can enable or disable location permission in device Settings at any time. Disabling it will prevent the above features from working.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>6. Data Security</h3>
+                    <p>We take reasonable technical and organizational measures to protect your information, including:</p>
+                    <ul>
+                        <li>Encryption to protect data in transit</li>
+                        <li>Supabase Row Level Security (RLS) to restrict data access</li>
+                        <li>Regular security audits and updates</li>
+                    </ul>
+                    <p><strong>Note:</strong> No Internet transmission is completely secure. We strive to protect your information but cannot guarantee absolute security.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>7. Data Retention</h3>
+                    <p>We retain your personal information only as long as necessary. When you delete your account, we will delete the associated personal data (game data, location records, communication messages, etc.). Some data may be retained for a period required by law.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>8. Your Rights</h3>
+                    <p>Under applicable privacy laws, you may have the right to:</p>
+                    <ul>
+                        <li>Access the personal information we hold about you</li>
+                        <li>Request correction of inaccurate information</li>
+                        <li>Request deletion of your personal data (can be done directly in the App's settings)</li>
+                        <li>Object to our processing of your information</li>
+                        <li>Request a portable copy of your data</li>
+                    </ul>
+                    <p>To exercise these rights, please contact us using the details at the bottom of this policy.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>9. Children's Privacy</h3>
+                    <p>末日之主 is not directed at children under 13. We do not knowingly collect personal information from children under 13. If we discover that a child's information has been collected, we will delete it immediately.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>10. Policy Updates</h3>
+                    <p>We may update this Privacy Policy from time to time. For significant changes, we will notify you through the App. Your continued use of the App constitutes acceptance of the updated policy.</p>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>11. Contact Us</h3>
+                    <ul>
+                        <li><strong>Email:</strong> 1614103587@qq.com</li>
+                        <li><strong>Response Time:</strong> Usually within 7 business days</li>
+                        <li><strong>Please include:</strong> A clear description of your request or concern</li>
+                    </ul>
+                </section>
+
+                <section class="privacy-section">
+                    <h3>12. Compliance</h3>
+                    <ul>
+                        <li>GDPR (General Data Protection Regulation)</li>
+                        <li>Apple App Store Privacy Requirements</li>
+                        <li>Personal Information Protection Law of the People's Republic of China</li>
+                    </ul>
+                </section>
+
+                <p style="margin-top: 40px; font-size: 0.9em; color: #666;">
+                    <strong>Disclaimer:</strong> This Privacy Policy is provided for informational purposes only and does not constitute legal advice. Please consult a legal professional for legal guidance.
+                </p>
+            </div>
+
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 末日之主. 版权所有。</p>
+            <p class="lang-zh">&copy; 2026 末日之主. 版权所有。</p>
+            <p class="lang-en">&copy; 2026 末日之主. All rights reserved.</p>
             <p>
-                <a href="index.html">首页</a> |
-                <a href="support.html">技术支持</a> |
-                <a href="privacy.html">隐私政策</a> |
-                <a href="terms.html">用户协议</a>
+                <a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a> |
+                <a href="support.html"><span class="lang-zh">技术支持</span><span class="lang-en">Support</span></a> |
+                <a href="privacy.html"><span class="lang-zh">隐私政策</span><span class="lang-en">Privacy</span></a> |
+                <a href="terms.html"><span class="lang-zh">用户协议</span><span class="lang-en">Terms</span></a>
             </p>
         </div>
     </footer>
+
+    <script>
+        function toggleLang() {
+            var html = document.documentElement;
+            var current = html.lang;
+            var next = current.startsWith('zh') ? 'en' : 'zh-Hans';
+            html.lang = next;
+            localStorage.setItem('site-lang', next);
+        }
+    </script>
 </body>
 </html>
