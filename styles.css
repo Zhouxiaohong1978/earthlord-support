@@ -27,10 +27,9 @@ body {
 }
 
 /* Language Toggle */
-.lang-zh { display: block; }
 .lang-en { display: none; }
-html[lang="en"] .lang-zh { display: none; }
-html[lang="en"] .lang-en { display: block; }
+html.show-en .lang-en { display: revert; }
+html.show-en .lang-zh { display: none; }
 
 .lang-toggle {
     display: inline-block;
