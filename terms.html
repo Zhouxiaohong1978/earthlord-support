@@ -9,16 +9,16 @@
         (function() {
             var lang = localStorage.getItem('site-lang');
             if (!lang) {
-                lang = (navigator.language || navigator.userLanguage || 'zh').startsWith('zh') ? 'zh-Hans' : 'en';
+                lang = (navigator.language || navigator.userLanguage || 'zh').startsWith('zh') ? 'zh' : 'en';
             }
-            document.documentElement.lang = lang;
+            if (lang === 'en') document.documentElement.classList.add('show-en');
         })();
     </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>☢️ 末日之主</h1>
+            <h1 class="lang-zh">☢️ 末日之主</h1><h1 class="lang-en">☢️ Doomsday Lord</h1>
             <p class="subtitle lang-zh">用户协议</p>
             <p class="subtitle lang-en">Terms of Service</p>
         </div>
@@ -376,7 +376,7 @@
     <footer>
         <div class="container">
             <p class="lang-zh">&copy; 2026 末日之主. 版权所有。</p>
-            <p class="lang-en">&copy; 2026 末日之主. All rights reserved.</p>
+            <p class="lang-en">&copy; 2026 Doomsday Lord. All rights reserved.</p>
             <p>
                 <a href="index.html"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a> |
                 <a href="support.html"><span class="lang-zh">技术支持</span><span class="lang-en">Support</span></a> |
@@ -389,10 +389,14 @@
     <script>
         function toggleLang() {
             var html = document.documentElement;
-            var current = html.lang;
-            var next = current.startsWith('zh') ? 'en' : 'zh-Hans';
-            html.lang = next;
-            localStorage.setItem('site-lang', next);
+            var isEn = html.classList.contains('show-en');
+            if (isEn) {
+                html.classList.remove('show-en');
+                localStorage.setItem('site-lang', 'zh');
+            } else {
+                html.classList.add('show-en');
+                localStorage.setItem('site-lang', 'en');
+            }
         }
     </script>
 </body>
